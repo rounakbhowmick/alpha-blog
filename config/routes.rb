@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'about', to: 'about#index'
-  resources :articles, only: [:show]
+  resources :articles, only: %i[show index]
   # get 'about/index'
   # get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
